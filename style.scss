@@ -1,0 +1,84 @@
+@use 'resets';
+@use 'variables' as *;
+
+body{
+    font-family: $ff;
+    font-size: $fs-primary;
+    font-weight: $fw-primary;
+    background-color: $yellow;
+    display: grid;
+    place-items: center;
+}
+
+main{
+    max-width: 23.75rem;
+    margin-inline: 1.5rem;
+    background-color: $white;
+    padding: 1.375rem;
+    border: 1px solid $black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0.5rem 0.5rem $black;
+
+    .image{
+        border-radius: 1rem;
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__tag{
+            color: $black;
+            background-color: $yellow;
+            font-weight: $fw-secondary;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+
+        &__published{
+            margin-top: 1rem;
+        }
+    }
+
+
+    .heading{
+        font-weight: $fw-secondary;
+        font-size: 1.5rem;
+        transition: color 500ms;
+        cursor: pointer;
+
+        &:hover{
+            color: $yellow;
+        }
+    }
+
+    .para{
+        color: $gray;
+        line-height: 1.5;
+    }
+
+    .author{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &__avatar{
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &__name{
+            font-weight: $fw-secondary;
+        }
+    }
+}
+
+@media screen and (min-width:40em){
+    .container{
+        margin: auto;
+    }
+}
